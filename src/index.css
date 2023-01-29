@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-josefin font-normal;
+  }
+
+  footer {
+    @apply bg-lTLightGray w-full h-screen fixed inset-0 -z-10 flex justify-center items-end divide-x-2 space-x-4 text-xs pb-4;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply w-full bg-no-repeat bg-contain bg-[top_center] py-14 lg:py-20 transition-all duration-300 ease-in-out;
+  }
+
+  .wrapper.light {
+    @apply bg-mbLightTheme md:bg-lightTheme text-lTGrayishBlue;
+  }
+
+  .wrapper.dark {
+    @apply bg-mbDarkTheme md:bg-darkTheme text-dTGrayishBlue;
+  }
+
+  .container {
+    @apply max-w-3xl mx-auto px-4;
+  }
+
+  /* FORM */
+
+  .form-group {
+    @apply flex bg-white items-center w-full h-[3.7rem] px-6 rounded-md mb-10;
+  }
+
+  .form-group form {
+    @apply w-full;
+  }
+
+  .form-control {
+    @apply border-none w-full outline-none pl-4 bg-white text-sm;
+  }
+
+  .wrapper.dark .form-group,
+  .wrapper.dark .form-group .form-control {
+    @apply bg-dtDesaturatedBlue;
+  }
+
+  .checkbox-wrapper {
+    @apply bg-lTGrayishBlue rounded-full hover:bg-checkboxHover;
+  }
+
+  .wrapper.dark .checkbox-wrapper {
+    @apply bg-dtDesaturatedBlue;
+  }
+
+  .checkbox {
+    @apply flex w-5 h-5 rounded-full border border-lTGrayishBlue bg-white justify-center items-center cursor-pointer;
+  }
+
+  .wrapper.dark .checkbox {
+    @apply bg-dtDesaturatedBlue border-dTGrayishBlue-2;
+  }
+
+  /* TODO COMPONENT */
+  .todo-list-section {
+    @apply bg-white rounded-md mb-4 shadow-md divide-y divide-lTGrayishBlue;
+  }
+
+  .wrapper.dark .todo-list-section {
+    @apply bg-dtDesaturatedBlue  divide-dTGrayishBlue-2  shadow-slate-900;
+  }
+
+  .todo-list {
+    @apply divide-y divide-lTGrayishBlue;
+  }
+
+  .wrapper.dark .todo-list {
+    @apply divide-dTGrayishBlue-2;
+  }
+
+  .todo-list li {
+    @apply flex items-center p-6;
+  }
+
+  .todo-list li p {
+    @apply text-sm ml-4 cursor-pointer text-lTGrayishBlue-2;
+  }
+
+  .wrapper.dark .todo-list li p {
+    @apply text-dTGrayishBlue;
+  }
+
+  .wrapper.dark .todo-list li.completed p {
+    @apply text-dTdarkGrayshBlue;
+  }
+
+  .todo-list li.completed .checkbox {
+    @apply bg-checkBackground;
+  }
+
+  .todo-left {
+    @apply text-sm text-lTGrayishBlue-1;
+  }
+
+  .wrapper.dark .todo-left {
+    @apply text-dTGrayishBlue-1;
+  }
+
+  .btn {
+    @apply font-bold transition-all duration-200 ease-in-out text-lTGrayishBlue-1 cursor-pointer text-xs;
+  }
+
+  .btn.active,
+  .wrapper.dark .btn.active {
+    @apply text-brightBlue;
+  }
+
+  .wrapper.dark .btn {
+    @apply text-dTGrayishBlue-1 hover:text-lightHover;
+  }
+
+  .text {
+    @apply py-4 text-sm text-center text-lTGrayishBlue-2;
+  }
+
+  .wrapper.dark .text {
+    @apply text-dTGrayishBlue;
+  }
+
+  /* FOOTER */
+  .wrapper.dark footer {
+    @apply bg-dtDarkBlue;
+  }
+}
