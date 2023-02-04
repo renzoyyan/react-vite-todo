@@ -1,2 +1,2 @@
 # ReactJS + Vite - Todo List
-# UI/UX - Frontend Mentor
+UI/UX - Frontend Mentor
